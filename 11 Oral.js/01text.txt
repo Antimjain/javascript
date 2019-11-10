@@ -1,0 +1,269 @@
+Revise
+Slice and splice
+Promise
+Duplicate value remove from an array
+Deep and shallow copy object 
+
+* Deep copy means copies all values or properties recursively in the new object whereas shallow copy copies only the reference.
+* In a deep copy, changes in the new object don't show in original object whereas, in shallow copy, changes in new objects will reflect in the original object.
+* In a deep copy, original objects do not share the same properties with new object whereas, in shallow copy, they do.
+
+Host objects: These are those objects which environment gives. It means they are different for different environments. For example, browsers include objects such as windows but Node.js environments give objects such as Node List.
+Native Objects: these are built-in objects in JavaScript. They are also known as Global Objects because they will be available to you independent of ay environment if you working in JavaScript.
+
+Higher order function is the best feature of functional programming available in JavaScript. It is the function which takes a function as an argument and returns a function as a result. Some of the inbuilt higher-order functions are mapping, filtering, reduction, zipping, etc.
+
+JavaScript entirely runs on the client machine. 301 is response code that is sent by the server as a response. So it is not possible to do 301 Redirects In JavaScript.
+
+import * as object name from ‘./file.js’ is used to import all exported members as an object. 
+
+A rrow functions cannot be used as constructors and also does not supports this, arguments, super, or new.target keywords.
+
+<div>
+ <ul>
+
+<li></li>
+
+</ul>
+
+</div>
+Bubbling 
+
+spread operator
+Use of setTimeout function in js
+what is console.time() and console.timeend() what is its syntax and why is it used
+what is js debounce function
+Diff between module.exports and exports
+
+Js testing framework
+* Unit.js
+* Jasmine
+* Karma
+* Chai
+* AVA
+* Mocha
+* JSUnit
+* QUnit
+* Jest
+* 
+47. How to you change the title of the page by JavaScript?
+document.title="My New Title";
+
+Object.assign() method is used for cloning an object in Javascript.
+var x = {myProp: "value"};
+var y = Object.assign({}, x); 
+
+
+There are 3 different ways to create an array in Javascript. They are
+* By array literal usage: var myArray=[value1,value2...valueN]; 
+* By creating instance of Array usage:var myArray=new Array(); 
+* By using an Array constructor usage:var myArray=new Array('value1','value2',...,'valueN'); 
+var myVar= "Hi!"
+console.log(myVar.valueOf())     //Hi
+
+string.length-1 is used to get the last index of a string in Javascript
+
+59. What will happen if an infinite while loop is run in Javascript?
+The program will crash the browser.
+
+
+Difference between the substr() and substring() functions in JavaScript.
+The substr() function has the form substr(startIndex,length). It returns the substring from startIndex and returns ‘length’ number of characters.
+var s = "hello";
+( s.substr(1,4) == "ello" ) // true
+The substring() function has the form substring(startIndex,endIndex). It returns the substring from startIndex up to endIndex – 1.
+var s = "hello";
+( s.substring(1,4) == "ell" ) // true
+
+
+There are two types of Inherientence in OOPS Classic and Prototypical Inheritance. Javascript follows Prototypical Inheritance.
+
+nan is output of undefined * 2.
+
+n Javascript close() method is used to close the current window. You must write window.close() to ensure that this command is associated with a window object and not some other JavaScript object.
+
+
+In JavaScript, there is some cool stuff that makes it the best of all. One of them is Delegation Model. When capturing and bubbling, allow functions to implement one single handler to many elements at one particular time then that is called event delegation. Event delegation allows you to add event listeners to one parent instead of specified nodes. That particular listener analyzes bubbled events to find a match on the child elements. Many people think it to be complicated but in reality, it is very simple if one starts understanding it.
+
+
+'This' keyword refers to the object from where it was called.
+
+
+Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.
+The setTimeout(function, delay) function is used to start a timer that calls a particular function after the mentioned delay. The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled. The clearInterval(id) function instructs the timer to stop.
+Timers are operated within a single thread, and thus events might queue up, waiting to be executed.
+
+
+
+'ViewState' is specific to a page in a session.
+'SessionState' is specific to user specific data that can be accessed across all pages in the web application.
+
+
+20. How can the style/class of an element be changed?
+It can be done in the following way:
+document.getElementById("myText").style.fontSize = "20?;
+or
+document.getElementById("myText").className = "anyclass";
+
+
+Explain how to read and write a file using JavaScript?
+There are two ways to read and write a file using JavaScript
+Using JavaScript extensions
+Using a web page and Active X objects
+
+
+How can you convert the string of any base to integer in JavaScript?
+parseInt ("4F", 16);
+
+
+Void(0) is used to prevent the page from refreshing and parameter "zero" is passed while calling.
+Void(0) is used to call another method without refreshing the page.
+
+
+detect the operating system on the client machine?
+ navigator.platform string (property) 
+
+
+Cookies are the small test files stored in a computer and it gets created when the user visits the websites to store information that they need. Example could be User Name details and shopping cart information from the previous visits.
+
+No. JavaScript does not have concept level scope. The variable declared inside the function has scope inside the function.
+
+document.write("Welcome") is used to print the text – Welcome in the screen.
+Blur function is used to remove the focus from the specified object.
+
+
+push and unshift
+
+
+How can a particular frame be targeted, from a hyperlink, in JavaScript?
+This can be done by including the name of the required frame in the hyperlink using the 'target' attribute.
+<a href="/newpage.htm" target="newframe">>New Page</a>
+
+
+Both web-garden and web-farm are web hosting systems. The only difference is that web-garden is a setup that includes many processors in a single server while web-farm is a larger setup that uses more than one server.
+
+
+
+First-class functions: Functions in JavaScript are utilized as first class objects. This usually means that these functions can be passed as arguments to other functions, returned as values from other functions, assigned to variables or can also be stored in data structures.
+Nested functions: The functions, which are defined inside other functions, are called Nested functions. They are called 'everytime' the main function is invoked.
+
+
+Define unescape() and escape() functions?
+document.write(escape("Hello? How are you!"));
+Output: Hello%3F%20How%20are%20you%21
+document.write(unescape("Hello%3F%20How%20are%20you%21"));
+Output: Hello? How are you!
+
+
+Q49. What is the reason for wrapping the entire content of a JavaScript source file in a function book?
+This is an increasingly common practice, employed by many popular JavaScript libraries. This technique creates a closure around the entire contents of the file which, perhaps most importantly, creates a private namespace and thereby helps avoid potential name clashes between different JavaScript modules and libraries.
+Another feature of this technique is to allow for an easy alias for a global variable. This is often used in jQuery plugins.
+
+
+You can use JavaScript to include such items as drag-and-drop components and sliders to give a Rich Interface to your site visitors.
+forEach method calls a function for each element in the array.
+
+A local variable takes precedence over a global variable with the same name.
+
+
+Every object has a property called a prototype, where we can add methods to it and when you create another object from these the newly created object will automatically inherit its parent’s property.
+
+document.cookie = "key1 = value1; key2 = value2; expires = date";
+
+
+What is a Typed language?
+Dynamically
+Statically
+
+
+WINDOW => avaScript window is a global object which holds variables, functions, history, location.  
+document => The document also comes under the window and can be considered as the property of the window.
+
+
+One of the differences between the two is that Primitive Data Types are passed By Value and Objects are passed By Reference.
+
+By Value means creating a COPY of the original. Picture it like twins: they are born exactly the same, but the first twin doesn’t lose a leg when the second twin loses his in the war.
+By Reference means creating an ALIAS to the original. When your Mom calls you “Pumpkin Pie” although your name is Margaret, this doesn’t suddenly give birth to a clone of yourself: you are still one, but you can be called by these two very different names.
+
+
+Using test (), we will search a string for a given pattern, if it finds the matching text then it returns the Boolean value ‘true’ and else it returns ‘false’.
+But in exec (), we will search a string for a given pattern, if it finds the matching text then it returns the pattern itself and else it returns ‘null’ value.
+
+console.log("10"+20+30)  102030
+
+
+How to set the cursor to wait in JavaScript?
+window.document.body.style.cursor = "wait"; 
+
+
+If using dot notation, the property must be a string and refer to a property that exists.
+
+
+
+When using bracket notation, any valid JavaScript expression that produces a value can be used inside the brackets, such as a variable or an an array element.
+
+
+
+Which Object.property Combination Provides A Reference To The Protocol Used To View The Current Web Page?
+location.protocol
+
+
+An Object Literal Can Be Used To Create Private Variables?
+False. Only functions can be used in JavaScript to create privacy.
+
+
+Question 33. What Is The Difference Between A Constructor Function And A Non-constructor Function With Respect To The Word “this” ?
+In a non-constructor function, “this” refers to the global context or if the function is a method, it refers to the object to which the method belongs. In the instance object that is returned by a constructor function, “this” refers to the instance object itself.
+
+
+Question 31. Can A Javascript Constructor Return A Primitive Value (e.g. A Number Or A String)?
+
+Answer :
+
+No. A JavaScript constructor can only return an object. When no return value is specified, it returns an instance of itself. If an object is specified as the return value, then that object is the return value. If any value other than an object is specified as the return value, then it returns an instance of itself.
+
+
+
+Question 29. When You Create A Function Inside Of A Method, What Does The “this” Keyword Refer To When Used In That Function?
+The “window” object, Inside of a function, the “this” keyword always refers to the window object. But when a funciton is a property of on object, the “this” keyword always refers to the object that the function is a method of.
+var myObject  = {
+
+   color : "red",
+   test : function(){
+      function testThis(){
+        console.log(this.color); //undefined
+        console.log(window === this); //true
+      };
+     testThis();
+     console.log(this.color); //red
+     console.log(window === this); //false
+     return "done!"
+   }
+};
+myObject.test();
+
+In the above example, the output to your JavaScript console should be:
+undefined
+true
+red
+false
+“done!”
+The reason for the output is: The testThis function inside of the myObject.test method attempts to log the value of “this.color”. That function is NOT a method, it is just a function declaration, so “this” refers to the window object. In this code, the window object, does not have a “color” property, so “this.color” is undefined. Next, the testThis function inside of the myObject.test method compares, window to the “this” keyword (just to prove the previous point). Again, because the testThis function inside of the myObject.test method is NOT a method, it is a property of the window object, so “this” DOES equal the window object.
+Next, the myObject.test method attempts to log the value of “this.color”. Since the test metod is a property of the myObject object, and the myObject object has a property named “color”, the value of that property is logged to the console. Next, the myObject.test method attempts to compares window to the “this” keyword. Since the test metod is a property of the myObject object, the “this” keywork refers to the myObject object, and the comparison to the window object returns false.
+
+
+
+
+Question 25. The Terms “scope” And “context” Refer To The Same Thing In Javascript ?
+False, Scope pertains to the visibility of variables, and context refers to the object to which a method belongs (which can be changed by using call or apply).
+
+
+
+What is the use of a WeakMap object in JavaScript?
+What is the use of a Map object in JavaScript?
+What is the use of a WeakSet object in JavaScript?
+What is the use of a Set object in JavaScript?
+How can we calculate the length of the above associative array's counterArray //object.keys(obj).length  Object.getOwnPropertyNames(counterArray).length; 
+What Is Eval() And Floor() Functions In Javascript?
+The Terms “scope” And “context” Refer To The Same Thing In Javascript ?
+Question 24. What are Service Workers and when can you use them?
