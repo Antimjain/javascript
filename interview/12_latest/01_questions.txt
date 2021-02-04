@@ -1,0 +1,105 @@
+Block scope is also called as lexical scope 
+The Temporal Dead Zone - accessing value before declaration
+
+function add(first = second, second) {
+ return first + second;
+}
+console.log(add(1, 1)); // 2
+console.log(add(undefined, 1)); // throws an error
+
+// JavaScript representation of call to add(undefined, 1)
+let first = second;
+let second = 1;
+
+the call to add(undefined, 1) throws an error because
+second hasn’t yet been initialized when first is initialized. At that point, second
+is in the TDZ and therefore any references to second throw an error.
+
+
+var doSomething = function doSomethingElse() {
+ // empty
+};
+var person = {
+ get firstName() {
+ return "Nicholas"
+ },
+ sayName: function() {
+ console.log(this.name);
+ }
+}
+console.log(doSomething.name); // "doSomethingElse"
+console.log(person.sayName.name); // "sayName"
+console.log(person.firstName.name); // "get firstName"
+
+var doSomething = function() {
+ // empty
+};
+console.log(doSomething.bind().name); // "bound doSomething"
+console.log((new Function()).name); // "anonymous"
+
+
+call()
+
+function Person(name) {
+ if (this instanceof Person) {
+ this.name = name;
+ } else {
+ throw new Error("You must use new with Person.")
+ }
+}
+var person = new Person("Nicholas");
+var notAPerson = Person //throw error
+var notAPerson = Person.call(person, "Michael"); // works!
+construct() => constructor => 
+ 
+
+//ECMA 6
+ function Person(name) {
+ if (typeof new.target !== "undefined") {
+ this.name = name;
+ } else {
+ throw new Error("You must use new with Person.")
+ }
+}
+var person = new Person("Nicholas");
+var notAPerson = Person.call(person, "Michael"); // error!
+
+
+
+
+function Person(name) {
+ if (typeof new.target === Person) {
+ this.name = name;
+ } else {
+ throw new Error("You must use new with Person.")
+ }
+}
+function AnotherPerson(name) {
+ Person.call(this, name);
+}
+var person = new Person("Nicholas");
+var anotherPerson = new AnotherPerson("Nicholas"); // error!
+
+In this code, new.target must be Person in order to work correctly.
+When new AnotherPerson("Nicholas") is called, the subsequent call to
+Person.call(this, name) will throw an error because new.target is undefined
+inside of the Person constructor (it was called without new).
+
+
+
+Block-level functions are hoisted to the top of the block in which they
+are defined,
+
+
+
+
+
+// ECMAScript 6 behavior
+if (true) {
+ console.log(typeof doSomething); // "function"
+ function doSomething() {
+ // empty
+ }
+ doSomething();
+}
+console.log(typeof doSomething); // "function"

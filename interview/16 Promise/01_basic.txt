@@ -1,0 +1,42 @@
+// asynchronous programming, events and callbacks weren’t powerful enough
+// Promises
+
+/*
+1. JavaScript engines are built on the concept of a single-threaded event loop. 
+2. single-threaded - one piece of code is executed at a time
+3. code is kept in a job queue
+4. Whenever a piece of code is ready to be executed, it is added to the job queue
+5. When the JavaScript engine is finished executing code, the event loop executes the next job in the queue
+6. The event loop is a process inside the JavaScript engine that monitors code execution and manages the job
+queue. Keep in mind that as a queue, job execution runs from the first job
+in the queue to the last
+*/
+
+// The Event Model
+// button click => onclick event trigger and execute code
+let button = document.getElementById("my-btn");
+button.onclick = function(event) {
+ console.log("Clicked");
+};
+
+// The Callback Pattern
+readFile("example.txt", function(err, contents) {
+  if (err) {
+  throw err;
+  }
+  console.log(contents);
+ });
+ console.log("Hi!");
+
+
+ readFile("example.txt", function(err, contents) {
+  if (err) {
+  throw err;
+  }
+  writeFile("example.txt", function(err) {
+  if (err) {
+  throw err;
+  }
+  console.log("File was written!");
+  });
+ });

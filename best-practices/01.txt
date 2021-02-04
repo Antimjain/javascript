@@ -1,0 +1,19 @@
+1. Use meaningful Variable Names
+premitive wrapper
+let name = new String("antim")
+
+
+in operator
+
+var person1 = {
+ name: "Nicholas",
+ sayName: function() {
+ console.log(this.name);
+ }
+};
+console.log("name" in person1); // true
+console.log(person1.hasOwnProperty("name")); // true
+console.log("toString" in person1); // true
+u console.log(person1.hasOwnProperty("toString")); // false
+
+delete person1.name;

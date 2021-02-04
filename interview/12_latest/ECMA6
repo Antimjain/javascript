@@ -1,0 +1,27 @@
+function createPerson(name, age) {
+ return {
+ name:name,
+ age:age
+ };
+}
+
+var person = {
+ name: "Nicholas",
+ sayName: function() {
+ console.log(this.name);
+ }
+};
+
+function createPerson(name, age) {
+ return {
+ name,
+ age
+ };
+}
+
+var person = {
+ name: "Nicholas",
+ sayName() {
+ console.log(this.name);
+ }
+};

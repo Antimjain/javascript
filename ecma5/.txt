@@ -1,0 +1,53 @@
+// Primitive Types
+// Boolean
+// String
+// Number
+// undefined
+// null => Object
+
+var color1 = "red";
+var color2 = color1;
+// different memory location
+
+// type of to check the type of primitive type
+// == , === difference
+
+
+// Primitive Methods
+var name = "Nicholas";
+var lowercaseName = name.toLowerCase(); // convert to lowercase
+var firstLetter = name.charAt(0); // get first character
+var middleOfName = name.substring(2, 5); // get characters 2-4
+var count = 10;
+var fixedCount = count.toFixed(2); // convert to "10.00"
+var hexCount = count.toString(16); // convert to "a"
+var flag = true;
+var stringFlag = flag.toString(); // convert to "true"
+
+
+// Despite the fact that they have methods, primitive values themselves are not objects.
+// JavaScript makes them look like objects to provide a consistent experience in the
+// language, as you’ll see later in this chapter.
+
+var object1 = new Object();
+var object2 = object1;
+
+object1 = null; // dereference
+
+var colors = [ "red", "blue", "green" ];
+console.log(colors[0]); // "red"
+// This code is equivalent to the following:
+var colors = new Array("red", "blue", "green")
+console.log(colors[0]); // "re
+
+
+
+var name = "Nicholas";
+var firstChar = name.charAt(0);
+console.log(firstChar); // "N"
+
+var name = "Nicholas";
+var temp = new String(name);
+var firstChar = temp.charAt(0);
+temp = null;
+console.log(firstChar); 
