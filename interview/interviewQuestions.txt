@@ -1,0 +1,79 @@
+object.assign()
+object.is(obj)
+submit form =>  document.form[0].submit();
+DOMContentLoaded => html loaded
+document load => html, css assets
+BOM => objects navigator, history, screen, location and document
+void 0 => prevent page refresh
+undefined +1 = Nan
+null +1 = 1
+
+NaN =>
+Math.sqrt(-1)
+parseInt("Hello")
+
+double exclamation - boolean value
+
+web worker - postMessage(), terminate(), onmessage, onfetch event
+
+SSE notification - EventSource obj, source.onmessage , onopen, onerror
+
+What is a storage event and its event handler
+  The StorageEvent is an event that fires when a storage area has been changed in the context of another document.
+  Whereas onstorage property is an EventHandler for processing storage events
+  window.onstorage = functionRef;
+  
+  window.onstorage = function(e) {
+    console.log('The ' + e.key +
+    ' key has been changed from ' + e.oldValue +
+    ' to ' + e.newValue + '.');
+  };
+
+memoization - used cache otherwise calculate
+post message - enables cross-origin communication between Window objects.
+
+1. why Immediately Invoked Function Expression?
+  data privacy because any variables declared within the IIFE cannot be accessed by the outside world. i.e,
+  If you try to access variables with IIFE then it throws an error as below,
+  (function ()
+          {
+            var message = "IIFE";
+            console.log(message);
+          }
+  )
+  ();
+  console.log(message); //Error: message is not defined
+
+2 why memoization 
+increase a function’s performance by caching its previously computed results.
+
+3. why closures?
+
+4. Cookie
+  Cookies are used to remember information about the user profile
+  key value pair, expire time set, path set, delete Cookie by setting previous time
+
+5. promise?
+  async task
+
+6. callbacks?
+  js event driven That means instead of waiting for a response javascript will keep executing while listening for other events.
+  callbacks are used in a way to make sure that certain code doesn’t execute until the other code finishes execution.
+function firstFunction(){
+  // Simulate a code delay
+  setTimeout( function(){
+    console.log('First function called');
+  }, 1000 );
+}
+function secondFunction(){
+  console.log('Second function called');
+}
+firstFunction();
+secondFunction();
+
+Output
+// Second function called
+// First function called
+
+7. why promise.race()
+which is firstly resolved or rejected. (which is faster we can identify)
