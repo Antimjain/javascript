@@ -1,12 +1,35 @@
 object.assign()
 object.is(obj)
+Object.defineProperty()
+call stack, event loop
+Obfuscation ? => machine code (code size reduce, fast transfer, hide business logic, complex read)
+Encryption => unreadable form 
+Minification => removing unneccessary char (save bandwidth and loading time)
+
+Math.floor(Math.random() * 10) + 1;     // returns a random integer from 1 to 10
+Math.floor(Math.random() * 100) + 1;     // returns a random integer from 1 to 100
+
+PWA, app shell model?
 submit form =>  document.form[0].submit();
 DOMContentLoaded => html loaded
 document load => html, css assets
 BOM => objects navigator, history, screen, location and document
+polyfill =>provide modern functionality on older browsers
+tree shaking => form of dead code elimination, implemented in Rollup and Webpack bundlers.
+js lebel => named loop
+How do you print the contents of web page => window.print()
 void 0 => prevent page refresh
 undefined +1 = Nan
 null +1 = 1
+
+
+function argument => argument.length
+function parameter => function.length
+
+
+XMLHttpRequest = synchronous http req
+xmlHttpReq.open( "GET", theUrl, false ); // false for synchronous request
+asynchronous =>xmlHttp.open("GET", theUrl, true); // true for asynchronous
 
 NaN =>
 Math.sqrt(-1)
@@ -15,6 +38,16 @@ parseInt("Hello")
 double exclamation - boolean value
 
 web worker - postMessage(), terminate(), onmessage, onfetch event
+
+event delegation -technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.
+var form = document.querySelector('#registration-form');
+// Listen for changes to fields inside the form
+form.addEventListener('input', function (event) {
+// Log the field that was changed
+console.log(event.target);
+}, false);
+
+
 
 SSE notification - EventSource obj, source.onmessage , onopen, onerror
 
@@ -77,3 +110,7 @@ Output
 
 7. why promise.race()
 which is firstly resolved or rejected. (which is faster we can identify)
+
+8. why JSON - data exchange
+
+9. 
