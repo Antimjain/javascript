@@ -59,3 +59,16 @@ function getAge(...args) {
 }
 
 getAge(21); //object
+
+
+console.log(+"meow"); // Output: NaN
+
+console.log(null + undefined); // Output: NaN
+console.log("(null + undefined): " + (null + undefined)); // Output: NaN
+
+
+console.log("MAX : " + Math.max(10, 2, NaN)); // Output: NaN
+console.log("MAX : " + Math.max()); // Output: -Infinity
+
+
+

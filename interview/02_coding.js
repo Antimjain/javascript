@@ -100,3 +100,10 @@ Dups_array(names);
 
 
 
+var arr = ["javascript", "typescript", "es6"];
+var searchValue = (value) => {
+  return arr.filter((item) => {
+    return item.indexOf(value) > -1;
+  });
+};
+console.log(searchValue("script")); //["javascript", "typescript"];
