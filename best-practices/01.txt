@@ -14,6 +14,6 @@ var person1 = {
 console.log("name" in person1); // true
 console.log(person1.hasOwnProperty("name")); // true
 console.log("toString" in person1); // true
-u console.log(person1.hasOwnProperty("toString")); // false
+console.log(person1.hasOwnProperty("toString")); // false
 
 delete person1.name;
