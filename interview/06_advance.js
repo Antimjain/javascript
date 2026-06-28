@@ -5,24 +5,18 @@
 // a DOM element
 // a callback function (that takes a DOM element as its argument)
 
-function Traverse(p_element,p_callback) {
-  p_callback(p_element);
-  var list = p_element.children;
-  for (var i = 0; i < list.length; i++) {
-      Traverse(list[i],p_callback);  // recursive call
-  }
+function Traverse(p_element, p_callback) {
+    p_callback(p_element);
+    var list = p_element.children;
+    for (var i = 0; i < list.length; i++) {
+        Traverse(list[i], p_callback); // recursive call
+    }
 }
-
-
-
-
-
-
 
 // The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?
 var list = readHugeList();
 
-var nextListItem = function() {
+var nextListItem = function () {
     var item = list.pop();
 
     if (item) {
@@ -35,42 +29,28 @@ var nextListItem = function() {
 
 var list = readHugeList();
 
-var nextListItem = function() {
+var nextListItem = function () {
     var item = list.pop();
 
     if (item) {
         // process the list item...
-        setTimeout( nextListItem, 0);
+        setTimeout(nextListItem, 0);
     }
 };
 // The stack overflow is eliminated because the event loop handles the recursion, not the call stack. When nextListItem runs, if item is not null, the timeout function (nextListItem) is pushed to the event queue and the function exits, thereby leaving the call stack clear. When the event queue runs its timed-out event, the next item is processed and a timer is set to again invoke nextListItem. Accordingly, the method is processed from start to finish without a direct recursive call, so the call stack remains clear, regardless of the number of iterations.
-
-
-
-
-
-
-
-
-
-
 
 // Assuming d is an “empty” object in scope, say:
 
 var d = {};
 // …what is accomplished using the following code?
 
-[ 'zebra', 'horse' ].forEach(function(k) {
-	d[k] = undefined;
+["zebra", "horse"].forEach(function (k) {
+    d[k] = undefined;
 });
 
 // The snippet of code shown above sets two properties on the object d. Ideally, any lookup performed on a JavaScript object with an unset key evaluates to undefined. But running this code marks those properties as “own properties” of the object.
 
 // This is a useful strategy for ensuring that an object has a given set of properties. Passing this object to Object.keys will return an array with those set keys as well (even if their values are undefined).
-
-
-
-
 
 // Consider the following code snippet:
 
@@ -83,8 +63,6 @@ var d = {};
 // (a) What gets logged to the console when the user clicks on “Button 4” and why?
 
 // (b) Provide one or more alternate implementations that will work as expected.
-
-
 
 // (a) No matter what button the user clicks the number 5 will always be logged to the console. This is because, at the point that the onclick method is invoked (for any of the buttons), the for loop has already completed and the variable i already has a value of 5. (Bonus points for the interviewee if they know enough to talk about how execution contexts, variable objects, activation objects, and the internal “scope” property contribute to the closure behavior.)
 
@@ -125,69 +103,51 @@ var d = {};
 //   document.body.appendChild(btn);
 // }
 
-
-
-
-
-
-
-function foo1()
-{
-  return {
-      bar: "hello"
-  };
+function foo1() {
+    return {
+        bar: "hello",
+    };
 }
 
-function foo2()
-{
-  return
-  {
-      bar: "hello"
-  };
+function foo2() {
+    return;
+    {
+        bar: "hello";
+    }
 }
-
-
-
-
-
 
 var myObject = {
-  foo: "bar",
-  func: function() {
-      var self = this;
-      console.log("outer func:  this.foo = " + this.foo);
-      console.log("outer func:  self.foo = " + self.foo);
-      (function() {
-          console.log("inner func:  this.foo = " + this.foo);
-          console.log("inner func:  self.foo = " + self.foo);
-      }());
-  }
+    foo: "bar",
+    func: function () {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function () {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        })();
+    },
 };
 myObject.func();
-
-
-
-
 
 (() => {
     let x, y;
     try {
-      throw new Error();
+        throw new Error();
     } catch (x) {
-      (x = 1), (y = 2);
-      console.log(x);
+        ((x = 1), (y = 2));
+        console.log(x);
     }
     console.log(x);
     console.log(y);
-  })();
+})();
 
-
-
-
-
-  [[0, 1], [2, 3]].reduce(
+[
+    [0, 1],
+    [2, 3],
+].reduce(
     (acc, cur) => {
-      return acc.concat(cur);
+        return acc.concat(cur);
     },
     [1, 2],
-  );
+);

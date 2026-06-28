@@ -1,70 +1,3 @@
-object.assign()
-object.is(obj)
-Object.defineProperty()
-call stack, event loop
-Obfuscation ? => machine code (code size reduce, fast transfer, hide business logic, complex read)
-Encryption => unreadable form 
-Minification => removing unneccessary char (save bandwidth and loading time)
-
-Math.floor(Math.random() * 10) + 1;     // returns a random integer from 1 to 10
-Math.floor(Math.random() * 100) + 1;     // returns a random integer from 1 to 100
-
-PWA, app shell model?
-submit form =>  document.form[0].submit();
-DOMContentLoaded => html loaded
-document load => html, css assets
-BOM => objects navigator, history, screen, location and document
-polyfill =>provide modern functionality on older browsers
-tree shaking => form of dead code elimination, implemented in Rollup and Webpack bundlers.
-js lebel => named loop
-How do you print the contents of web page => window.print()
-void 0 => prevent page refresh
-undefined +1 = Nan
-null +1 = 1
-
-
-function argument => argument.length
-function parameter => function.length
-
-
-XMLHttpRequest = synchronous http req
-xmlHttpReq.open( "GET", theUrl, false ); // false for synchronous request
-asynchronous =>xmlHttp.open("GET", theUrl, true); // true for asynchronous
-
-NaN =>
-Math.sqrt(-1)
-parseInt("Hello")
-
-double exclamation - boolean value
-
-web worker - postMessage(), terminate(), onmessage, onfetch event
-
-event delegation -technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.
-var form = document.querySelector('#registration-form');
-// Listen for changes to fields inside the form
-form.addEventListener('input', function (event) {
-// Log the field that was changed
-console.log(event.target);
-}, false);
-
-
-
-SSE notification - EventSource obj, source.onmessage , onopen, onerror
-
-What is a storage event and its event handler
-  The StorageEvent is an event that fires when a storage area has been changed in the context of another document.
-  Whereas onstorage property is an EventHandler for processing storage events
-  window.onstorage = functionRef;
-  
-  window.onstorage = function(e) {
-    console.log('The ' + e.key +
-    ' key has been changed from ' + e.oldValue +
-    ' to ' + e.newValue + '.');
-  };
-
-memoization - used cache otherwise calculate
-post message - enables cross-origin communication between Window objects.
-
 1. why Immediately Invoked Function Expression?
   data privacy because any variables declared within the IIFE cannot be accessed by the outside world. i.e,
   If you try to access variables with IIFE then it throws an error as below,
@@ -77,40 +10,23 @@ post message - enables cross-origin communication between Window objects.
   ();
   console.log(message); //Error: message is not defined
 
-2 why memoization 
-increase a function’s performance by caching its previously computed results.
+2 why memoization - increase a function’s performance by caching its previously computed results.
 
-3. why closures?
+3. why closures - deboucing, throtlling, data privacy, memoization
 
 4. Cookie
   Cookies are used to remember information about the user profile
   key value pair, expire time set, path set, delete Cookie by setting previous time
 
-5. promise?
-  async task
+5. promise - async task
 
 6. callbacks?
   js event driven That means instead of waiting for a response javascript will keep executing while listening for other events.
   callbacks are used in a way to make sure that certain code doesn’t execute until the other code finishes execution.
-function firstFunction(){
-  // Simulate a code delay
-  setTimeout( function(){
-    console.log('First function called');
-  }, 1000 );
-}
-function secondFunction(){
-  console.log('Second function called');
-}
-firstFunction();
-secondFunction();
-
-Output
-// Second function called
-// First function called
-
-7. why promise.race()
-which is firstly resolved or rejected. (which is faster we can identify)
+  
+7. why promise.race() - which is firstly resolved or rejected. (which is faster we can identify)
 
 8. why JSON - data exchange
 
-9. 
+function argument => argument.length
+function parameter => function.length

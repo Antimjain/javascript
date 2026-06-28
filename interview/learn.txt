@@ -1,3 +1,6 @@
+Block scope is also called as lexical scope 
+The Temporal Dead Zone - accessing value before declaration
+
 How do get query string values in javascript
 
 regular express method for string
@@ -9,9 +12,9 @@ var n = msg.replace(/John/i, "Buttler"); // Hello Buttler
 
 
 Modifier	Description
-i	Perform case-insensitive matching
-g	Perform a global match rather than stops at first match
-m	Perform multiline matching
+i	        Perform case-insensitive matching
+g	        Perform a global match rather than stops at first match
+m	          Perform multiline matching
 
 
 exec[] and test (boolean)

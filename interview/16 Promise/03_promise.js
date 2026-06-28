@@ -10,25 +10,24 @@ successfully due to either an error or some other cause.
 
 */
 
-// Note Any object that implements the then() method as described in the preceding paragraph is called a thenable. All promises are thenables, but all thenables are not
-// promises
+// Note Any object that implements the then() method as described in the preceding paragraph is called a thenable. All promises are thenables, but all thenables are not promises
 
 // readFile promises to complete at some point in the future
 let promise = readFile("example.txt");
 promise.then(function(contents) {
-    // fulfillment
-    console.log(contents);
+        // fulfillment
+        console.log(contents);
     }, function(err) {
-    // rejection
-    console.error(err.message);
+        // rejection
+        console.error(err.message);
     });
     promise.then(function(contents) {
-    // fulfillment
-    console.log(contents);
+        // fulfillment
+        console.log(contents);
     });
     promise.then(null, function(err) {
-    // rejection
-    console.error(err.message);
+        // rejection
+        console.error(err.message);
 });
 
 
@@ -45,7 +44,7 @@ promise.then(function(contents) {
 });
  
 // job scheduling
-//  In job scheduling, you add a new job to the
+// In job scheduling, you add a new job to the
 // job queue to say, “Don’t execute this right now, but execute it later.
 
 let promise = new Promise(function(resolve, reject) {

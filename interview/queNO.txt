@@ -1,3 +1,103 @@
+What are javascript accessors
+Getters (get): Executed when you read a property.
+Setters (set): Executed when you assign a value to a property.
+
+How do you define property on Object constructor
+Object.prototype.sayHi = function() {
+    return "Hi!";
+};
+
+console.log({}.sayHi()); // "Hi!"
+
+
+Use of setTimeout function in js - execute a function or a block of code once after a specified delay in ms.
+what is console.time() and console.timeend() what is its syntax and why is it used  //execution time
+
+
+what is js debounce function //search after 5s when user stopped tiping
+Diff between module.exports -(Exporting a single React Component ) and exports multiple
+
+object.assign()
+object.is(obj)
+Object.defineProperty()
+call stack, event loop
+
+Obfuscation ? => machine code (code size reduce, fast transfer, hide business logic, complex read)
+Encryption => unreadable form 
+Minification => removing unneccessary char (save bandwidth and loading time)
+
+void 0 => prevent page refresh
+undefined +1 = Nan
+null +1 = 1
+Math.sqrt(-1) //NaN
+undefined * 2  //NaN
+parseInt("Hello") //NaN
+Math.floor(Math.random() * 10) + 1;     // returns a random integer from 1 to 10
+Math.floor(Math.random() * 100) + 1;     // returns a random integer from 1 to 100
+
+PWA, app shell model?
+In short, while a PWA is the "what" (a web app with native-like features), the App Shell Model is the "how" (an architectural strategy) used to make that web app feel fast, reliable, and responsive.
+
+submit form =>  document.form[0].submit();
+How do you print the contents of web page => window.print()
+
+DOMContentLoaded => html loaded
+document load => html, css assets
+BOM => Screen(h/w) objects navigator, history, location and document
+polyfill => provide modern functionality on older browsers
+tree shaking => form of dead code elimination, implemented in Rollup and Webpack bundlers.
+js lebel => named loop
+
+
+XMLHttpRequest = synchronous http req
+xmlHttpReq.open( "GET", theUrl, false ); // false for synchronous request
+asynchronous =>xmlHttp.open("GET", theUrl, true); // true for asynchronous
+
+
+double exclamation - boolean value
+
+web worker - postMessage(), terminate(), onmessage, onfetch event
+
+event delegation -technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.
+var form = document.querySelector('#registration-form');
+// Listen for changes to fields inside the form
+form.addEventListener('input', function (event) {
+// Log the field that was changed
+console.log(event.target);
+}, false);
+
+
+
+SSE notification - EventSource obj, source.onmessage , onopen, onerror
+
+What is a storage event and its event handler
+  The StorageEvent is an event that fires when a storage area has been changed in the context of another document.
+  Whereas onstorage property is an EventHandler for processing storage events
+  window.onstorage = functionRef;
+  
+  window.onstorage = function(e) {
+    console.log('The ' + e.key +
+    ' key has been changed from ' + e.oldValue +
+    ' to ' + e.newValue + '.');
+  };
+
+memoization - used cache otherwise calculate
+post message - enables cross-origin communication between Window objects.
+
+
+// Write the program using fatarrow function?
+var a = [1, 2, 3, 4];
+function sumUsingFunction(acc, value) {
+  return acc + value;
+}
+var sumOfArrayUsingFunc = a.reduce(sumUsingFunc);
+
+
+
+
+
+
+
 Revise
 Slice and splice
 Promise
@@ -8,8 +108,9 @@ Deep and shallow copy object
 * In a deep copy, changes in the new object don't show in original object whereas, in shallow copy, changes in new objects will reflect in the original object.
 * In a deep copy, original objects do not share the same properties with new object whereas, in shallow copy, they do.
 
-Host objects: These are those objects which environment gives. It means they are different for different environments. For example, browsers include objects such as windows but Node.js environments give objects such as Node List.
-Native Objects: these are built-in objects in JavaScript. They are also known as Global Objects because they will be available to you independent of ay environment if you working in JavaScript.
+NATIVE Object - JS - Object, Array, Function, String, Number, Boolean, Date, RegExp.
+HOST Object - browser/NODE JS  - window, document, process, fs (env dependant)
+
 
 Higher order function is the best feature of functional programming available in JavaScript. It is the function which takes a function as an argument and returns a function as a result. Some of the inbuilt higher-order functions are mapping, filtering, reduction, zipping, etc.
 
@@ -17,7 +118,7 @@ JavaScript entirely runs on the client machine. 301 is response code that is sen
 
 import * as object name from ‘./file.js’ is used to import all exported members as an object. 
 
-A rrow functions cannot be used as constructors and also does not supports this, arguments, super, or new.target keywords.
+
 
 <div>
  <ul>
@@ -30,10 +131,7 @@ A rrow functions cannot be used as constructors and also does not supports this,
 Bubbling 
 
 spread operator
-Use of setTimeout function in js
-what is console.time() and console.timeend() what is its syntax and why is it used
-what is js debounce function
-Diff between module.exports and exports
+
 
 Js testing framework
 * Unit.js
@@ -55,9 +153,10 @@ var y = Object.assign({}, x);
 
 
 There are 3 different ways to create an array in Javascript. They are
-* By array literalusage: var myArray=[value1,value2...valueN];
-* By creating instance of Arrayusage:var myArray=new Array();
-* By using an Array constructorusage:var myArray=new Array('value1','value2',...,'valueN');
+* By array literalusage:               var myArray=[value1,value2...valueN];
+* By creating instance of Array usage: var myArray = new Array();
+* By using an Array constructor usage: var myArray = new Array('value1','value2',...,'valueN');
+
 var myVar= "Hi!"
 console.log(myVar.valueOf())     //Hi
 
@@ -76,9 +175,10 @@ var s = "hello";
 ( s.substring(1,4) == "ell" ) // true
 
 
+
+
 There are two types of Inherientence in OOPS Classic and Prototypical Inheritance. Javascript follows Prototypical Inheritance.
 
-nan is output of undefined * 2.
 
 n Javascript close() method is used to close the current window. You must write window.close() to ensure that this command is associated with a window object and not some other JavaScript object.
 
@@ -86,7 +186,6 @@ n Javascript close() method is used to close the current window. You must write 
 In JavaScript, there is some cool stuff that makes it the best of all. One of them is Delegation Model. When capturing and bubbling, allow functions to implement one single handler to many elements at one particular time then that is called event delegation. Event delegation allows you to add event listeners to one parent instead of specified nodes. That particular listener analyzes bubbled events to find a match on the child elements. Many people think it to be complicated but in reality, it is very simple if one starts understanding it.
 
 
-'This' keyword refers to the object from where it was called.
 
 
 Timers are used to execute a piece of code at a set time or also to repeat the code in a given interval of time. This is done by using the functions setTimeout, setInterval and clearInterval.
@@ -176,7 +275,7 @@ Dynamically
 Statically
 
 
-WINDOW => avaScript window is a global object which holds variables, functions, history, location.  
+WINDOW => javaScript window is a global object which holds variables, functions, history, location.  
 document => The document also comes under the window and can be considered as the property of the window.
 
 

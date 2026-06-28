@@ -22,7 +22,7 @@ button.onclick = function(event) {
 // The Callback Pattern
 readFile("example.txt", function(err, contents) {
   if (err) {
-  throw err;
+   throw err;
   }
   console.log(contents);
  });
