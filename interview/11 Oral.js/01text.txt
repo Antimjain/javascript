@@ -55,9 +55,9 @@ var y = Object.assign({}, x);
 
 
 There are 3 different ways to create an array in Javascript. They are
-* By array literal usage: var myArray=[value1,value2...valueN]; 
-* By creating instance of Array usage:var myArray=new Array(); 
-* By using an Array constructor usage:var myArray=new Array('value1','value2',...,'valueN'); 
+* By array literalusage: var myArray=[value1,value2...valueN];
+* By creating instance of Arrayusage:var myArray=new Array();
+* By using an Array constructorusage:var myArray=new Array('value1','value2',...,'valueN');
 var myVar= "Hi!"
 console.log(myVar.valueOf())     //Hi
 
@@ -266,4 +266,3 @@ What is the use of a Set object in JavaScript?
 How can we calculate the length of the above associative array's counterArray //object.keys(obj).length  Object.getOwnPropertyNames(counterArray).length; 
 What Is Eval() And Floor() Functions In Javascript?
 The Terms “scope” And “context” Refer To The Same Thing In Javascript ?
-Question 24. What are Service Workers and when can you use them?

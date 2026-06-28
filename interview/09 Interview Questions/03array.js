@@ -50,7 +50,7 @@ console.log(array3.length) //1
 let array = new Array('a','b','c')
 array[10] = 'n'
 delete array[10]
-console.log(array.length) //1
+console.log(array.length) //11
 
 //7
 let animal = ['cow','cat']

@@ -87,6 +87,7 @@ function abc(){
         foo: 'foo'
     })
     let b = a
+    // Copying the Reference anything happens to b will also happen to a
     b.foo = 'bar'
     console.log(a.foo);   //bar
     console.log(b.foo);   //bar
@@ -101,9 +102,9 @@ function asd(){
     })
     let b = a
     b.foo = 'bar';
-    delete a.foo
-    console.log(a.foo);   //foo
-    console.log(b.foo);   //foo
+    delete a.foo  //b.foo = 'bar'; delete this not the prototype chain.
+    console.log(a.foo);   //foo not bar
+    console.log(b.foo);   //foo not bar
 }
 asd()
 

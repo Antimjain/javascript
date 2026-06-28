@@ -24,4 +24,3 @@ escape => encode => decode
 webgarden many processors in single server
 webform   uses more servers
 both are web hosting system
-

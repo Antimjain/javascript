@@ -1,19 +1,7 @@
-var b = 1;
-function outer(){
-   	var b = 2
-    function inner(){
-        b++;
-        var b = 3;
-        console.log(b)
-    }
-    inner();
-}
-outer();
+
 
 typeof undefined == typeof NULL
 
-console.log(1 < 2 < 3);
-console.log(3 > 2 > 1);
 
 for (let i = 0; i < 5; i++) {
     setTimeout(function() { console.log(i); }, i * 1000 );
